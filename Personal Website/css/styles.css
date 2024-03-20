@@ -1,0 +1,16 @@
+.display-5 {
+    font-family: "Palanquin Dark", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #0d6efd;
+}
+
+.lead {
+    color: white;
+}
+
+.emphasis {
+font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: italic;
+}
