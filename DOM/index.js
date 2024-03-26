@@ -21,6 +21,7 @@ function buttonClicked() {
     let link = document.querySelector('.container a');
 
     document.firstElementChild.lastElementChild.querySelector('button').innerHTML = "Don't click me!";
-    link.href = "https://www.tiktok.com/@meowdalynn/video/6973863159752854789";
+    // link.href = "https://www.tiktok.com/@meowdalynn/video/6973863159752854789";
     link.style.backgroundColor = 'red';
+    link.setAttribute('href', 'https://www.tiktok.com/@meowdalynn/video/6973863159752854789');
 }

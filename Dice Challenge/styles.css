@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+}
+
+.description {
+    text-align: center;
+}
+
+.dice {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+ul {
+    font-size: 20pt;
+    list-style:lower-greek;
+}
