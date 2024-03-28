@@ -1,0 +1,30 @@
+body {
+    background-image: url('./images/tile.jpg');
+    background-size: 100px 100px;
+    background-repeat: repeat;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 48pt;
+    font-style: italic;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-list {
+    list-style: none;
+}
+
+.button-list > li {
+    margin: 10px;
+}
+
+button {
+    font-size: 28pt;
+    border-radius: 25%;
+}
