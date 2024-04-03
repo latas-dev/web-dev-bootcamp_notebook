@@ -17,9 +17,7 @@ buttons.each(function(button) {
         let userChosenColor = $(this).attr("id");
         userClickedPattern.push(userChosenColor);
         buttonSelect(userChosenColor);
-        if(userClickedPattern.length === gamePattern.length) {
-            checkAnswer(userClickedPattern.length - 1);
-        }
+        checkAnswer(userClickedPattern.length - 1);
     });
 });
 
@@ -34,27 +32,26 @@ function endGame() {
     setTimeout(function() {
         $("body").removeClass("game-over");
     }, 200);
-    $("h1").text("GAME OVER! Press Any Key to Restart");
+    $("h1").text("GAME OVER! Press A to Restart");
 }
 
 function checkAnswer(currentLevel) {
-    for(let i = 0; i <= currentLevel; i++) {
-        if(userClickedPattern[i] === gamePattern[i]) {
-            console.log("success");
-        } else {
-            console.log("failure");
-            console.log("User: " + userClickedPattern);
-            console.log("Game: " + gamePattern);
-            endGame();
-            return;
-        }
+    if (userClickedPattern[currentLevel] !== gamePattern[currentLevel]) {
+        console.log("failure");
+        console.log("User: " + userClickedPattern);
+        console.log("Game: " + gamePattern);
+        endGame();
+        return;
     }
-    console.log(userClickedPattern);
-    console.log(gamePattern);
-    setTimeout(function() {
-        nextSequence();
-    }, 1000);
-    userClickedPattern = [];
+
+    if (userClickedPattern.length === gamePattern.length) {
+        console.log(userClickedPattern);
+        console.log(gamePattern);
+        setTimeout(function() {
+            nextSequence();
+        }, 1000);
+        userClickedPattern = [];
+    }
 }
 
 function changeLevel() {
